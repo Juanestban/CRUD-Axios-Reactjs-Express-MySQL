@@ -1,0 +1,46 @@
+.task {
+    width: 60%;
+    display: flex;        
+    margin: 0;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loader {
+    width: 80px;
+    height: 80px;
+}
+
+.card {
+    width: 47%;
+    height: max-content;
+    color: #2b2d38;
+    margin: 5px 5px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+progress {
+    width: 18px;
+}
+
+.timeago {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.buttons-view {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-view button {
+    margin: 5px;
+}

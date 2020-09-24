@@ -1,24 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { LogicalTask } from './Components/Task/logicalTask';
+import { LogicalForm } from './Components/FormTask/logicalForm';
 
 function App() {
+  const [taskE, setTaskE] = useState(undefined)
+
+  const handleTask = (task) => {
+    setTaskE(task)
+  }
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="Interfaz">
+          <LogicalForm Task={taskE} />
+          <LogicalTask task={handleTask} />
+        </div>
+      </div>
     </div>
   );
 }
